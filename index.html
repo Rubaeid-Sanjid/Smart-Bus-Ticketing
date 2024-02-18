@@ -190,7 +190,7 @@
                     class="bg-[#1DD10026] p-5 flex gap-3 rounded-xl text-[#1DD100] text-lg font-medium"
                   >
                     <img src="images/seat-green.png" alt="" />
-                    <h3>40 Seats left</h3>
+                    <h3><span id="availableSeats">40</span> Seats left</h3>
                   </div>
                 </div>
               </div>
@@ -269,25 +269,25 @@
               </kbd>
             </div>
 
-            <div class="grid grid-cols-2 gap-16">
+            <div id="seat-buttons" class="grid grid-cols-2 gap-16">
               <div class="flex items-center gap-5">
                 <h2>A</h2>
-                <kbd class="kbd kbd-lg border-none px-12">A1</kbd>
-                <kbd class="kbd kbd-lg border-none px-12">A2</kbd>
+                <kbd id="A1" class="kbd kbd-lg border-none px-12">A1</kbd>
+                <kbd id="A2" class="kbd kbd-lg border-none px-12">A2</kbd>
               </div>
               <div class="flex gap-5">
-                <kbd class="kbd kbd-lg border-none px-10">A3</kbd>
-                <kbd class="kbd kbd-lg border-none px-10">A4</kbd>
+                <kbd id="A3" class="kbd kbd-lg border-none px-10">A3</kbd>
+                <kbd id="A4" class="kbd kbd-lg border-none px-10">A4</kbd>
               </div>
 
               <div class="flex items-center gap-5">
                 <h2>B</h2>
-                <kbd class="kbd kbd-lg border-none px-12">B1</kbd>
-                <kbd class="kbd kbd-lg border-none px-12">B2</kbd>
+                <kbd id="B1" class="kbd kbd-lg border-none px-12">B1</kbd>
+                <kbd id="B2" class="kbd kbd-lg border-none px-12">B2</kbd>
               </div>
               <div class="flex gap-5">
-                <kbd class="kbd kbd-lg border-none px-10">B3</kbd>
-                <kbd class="kbd kbd-lg border-none px-10">B4</kbd>
+                <kbd id="B3" class="kbd kbd-lg border-none px-10">B3</kbd>
+                <kbd id="B4" class="kbd kbd-lg border-none px-10">B4</kbd>
               </div>
             </div>
           </div>
@@ -299,18 +299,29 @@
             <!-- price details -->
             <div class="bg-[#F7F8F8] p-6 mt-10 rounded-xl">
               <div class="flex justify-between border-b-2 pb-4 border-dashed">
-                <h3 class="font-medium text-lg">Seat</h3>
+                <h3 class="font-medium text-lg">Seat <span id="bookedSeats" class="bg-[#1DD100] text-white">0</span></h3>
                 <h3 class="font-medium text-lg">Class</h3>
                 <h3 class="font-medium text-lg">Price</h3>
               </div>
               <!-- selected seats -->
-              <div class="flex justify-between border-b-2 p-4">
-                <h3>C2</h3>
+              <div id="selectedSeats" class="border-b-2 p-4">
+                <!-- <table>
+                  <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                  </tr>
+                  <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                  </tr>
+                </table> -->
               </div>
               <!-- total price -->
               <div class="flex justify-between p-4">
                 <h3 class="font-medium text-lg">Total Price</h3>
-                <h3 class="font-medium text-lg">BDT <span>1100</span></h3>
+                <h3 class="font-medium text-lg">BDT <span id="totalPrice">0</span></h3>
               </div>
               <!-- coupon field -->
               <div class="flex">
@@ -324,7 +335,7 @@
               <!-- grand total price -->
               <div class="flex justify-between p-4">
                 <h3 class="font-medium text-lg">Grand Total</h3>
-                <h3 class="font-medium text-lg">BDT <span>1100</span></h3>
+                <h3 class="font-medium text-lg">BDT <span id="grandTotal">0</span></h3>
               </div>
             </div>
             <!-- form -->
@@ -335,7 +346,7 @@
               </label>
               <h3 class="font-medium text-lg">Phone Number*</h3>
               <label class="input input-bordered flex items-center gap-2">
-                <input type="text" class="grow" placeholder="Enter your phone number" />
+                <input id="phoneNumber" type="text" class="grow" placeholder="Enter your phone number" />
               </label>
               <h3 class="font-medium text-lg">Email ID</h3>
               <label class="input input-bordered flex items-center gap-2">
@@ -351,5 +362,9 @@
         </div>
       </section>
     </main>
+    <footer>
+
+  id="">"   </footer>
+    <script src="index.js"></script>
   </body>
 </html>
