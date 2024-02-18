@@ -152,9 +152,9 @@
           </button>
         </div>
       </section>
-
+      <!-- Paribahan section -->
       <section
-        class="mt-28 border-t-2 border-[#1DD100] bg-[#F7F8F8]"
+        class="mt-28 rounded-t-3xl border-t-2 border-[#1DD100] bg-[#F7F8F8]"
       >
         <div class="text-center space-y-5 mt-10">
           <h2 class="text-4xl font-bold">SRS Paribahan</h2>
@@ -238,12 +238,13 @@
           </div>
         </div>
         <!-- select seats container -->
-        <div class="container mx-auto px-3 lg:px-24 mt-10">
+        <div class="container mx-auto px-3 lg:px-24 mt-10 grid grid-cols-2">
           <!-- left side section -->
-          <div class="w-1/2 card bg-base-100 p-8">
+          <div class="bg-base-100 p-8">
             <h4 class="text-2xl font-semibold border-b-2 p-4 border-dashed">
               Select Your Seat
             </h4>
+            <!-- seat status container -->
             <div class="flex justify-between p-4 border-b-2 border-dashed">
               <div class="flex">
                 <img src="/images/seat-gray.png" alt="" />
@@ -288,6 +289,63 @@
                 <kbd class="kbd kbd-lg border-none px-10">B3</kbd>
                 <kbd class="kbd kbd-lg border-none px-10">B4</kbd>
               </div>
+            </div>
+          </div>
+          <!-- select seats right side -->
+          <div class="bg-base-100 p-8">
+            <h4 class="text-2xl font-semibold border-b-2 p-4 border-dashed">
+              Select Your Seat
+            </h4>
+            <!-- price details -->
+            <div class="bg-[#F7F8F8] p-6 mt-10 rounded-xl">
+              <div class="flex justify-between border-b-2 pb-4 border-dashed">
+                <h3 class="font-medium text-lg">Seat</h3>
+                <h3 class="font-medium text-lg">Class</h3>
+                <h3 class="font-medium text-lg">Price</h3>
+              </div>
+              <!-- selected seats -->
+              <div class="flex justify-between border-b-2 p-4">
+                <h3>C2</h3>
+              </div>
+              <!-- total price -->
+              <div class="flex justify-between p-4">
+                <h3 class="font-medium text-lg">Total Price</h3>
+                <h3 class="font-medium text-lg">BDT <span>1100</span></h3>
+              </div>
+              <!-- coupon field -->
+              <div class="flex">
+                <input type="text" placeholder="Have any coupon?" class="w-full max-w-xs border-none rounded-s-xl p-3" />
+                <button
+                class="btn bg-[#1DD100] text-xl font-semibold text-white border-none"
+                >
+                Apply
+                </button>
+              </div>
+              <!-- grand total price -->
+              <div class="flex justify-between p-4">
+                <h3 class="font-medium text-lg">Grand Total</h3>
+                <h3 class="font-medium text-lg">BDT <span>1100</span></h3>
+              </div>
+            </div>
+            <!-- form -->
+            <div class="mt-6 space-y-6">
+              <h3 class="font-medium text-lg">Passenger Name*</h3>
+              <label class="input input-bordered flex items-center gap-2">
+                <input type="text" class="grow" placeholder="Enter your name" />
+              </label>
+              <h3 class="font-medium text-lg">Phone Number*</h3>
+              <label class="input input-bordered flex items-center gap-2">
+                <input type="text" class="grow" placeholder="Enter your phone number" />
+              </label>
+              <h3 class="font-medium text-lg">Email ID</h3>
+              <label class="input input-bordered flex items-center gap-2">
+                <input type="text" class="grow" placeholder="Enter your email id" />
+              </label>
+              <button
+                class="btn bg-[#1DD100] text-xl font-semibold text-white border-none w-full"
+                >
+                Next
+                </button>
             </div>
           </div>
         </div>
