@@ -22,7 +22,7 @@
 
   <body class="container mx-auto px-3 lg:px-24">
     <header>
-        <!-- Navbar -->
+      <!-- Navbar -->
       <nav class="mt-8">
         <div class="navbar bg-base-100">
           <div class="navbar-start">
@@ -47,13 +47,15 @@
                 tabindex="0"
                 class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
-              <li><a>Home</a></li>
-              <li><a>About</a></li>
-              <li><a>Destination</a></li>
-              <li><a>Search</a></li>
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Destination</a></li>
+                <li><a>Search</a></li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-2xl lg:text-4xl font-extrabold">P-Ticket</a>
+            <a class="btn btn-ghost text-2xl lg:text-4xl font-extrabold"
+              >P-Ticket</a
+            >
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal px-1">
@@ -64,8 +66,10 @@
             </ul>
           </div>
           <div class="navbar-end">
-            <a class="btn bg-[#1DD1001A] border-2 border-[#1DD10066] text-[#1DD100] text-xl">Bus
-                <img src="./images/bus-icon.png" alt="">
+            <a
+              class="btn bg-[#1DD1001A] border-2 border-[#1DD10066] text-[#1DD100] text-xl"
+              >Bus
+              <img src="./images/bus-icon.png" alt="" />
             </a>
           </div>
         </div>
@@ -73,16 +77,81 @@
 
       <!-- Banner -->
       <section class="mt-8">
-        <div class="hero h-[500px]" style="background-image: url(./images/banner.png);">
-            <div class="hero-content text-center text-white">
+        <div
+          class="hero h-[500px]"
+          style="background-image: url(./images/banner.png)"
+        >
+          <div class="hero-content text-center text-white">
+            <div class="">
+              <h1 class="mb-5 text-5xl font-bold">
+                End-to-End Travel with<br /><span class="text-[#1DD100]"
+                  >P Paribahan</span
+                >
+              </h1>
+              <p class="w-3/4 m-auto mb-5">
+                Yes, you can run unit tests and view the results directly within
+                the app. The integrated testing features allow for a streamlined
+                .
+              </p>
+              <button
+                class="btn bg-[#1DD100] text-xl font-bold text-black border-none"
+              >
+                Buy Tickets
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-- Best Offer section -->
+      <section class="mt-28">
+        <h2 class="text-4xl font-bold text-center">Best offers for you</h2>
+        <!-- coupon -->
+        <div class="flex justify-center gap-6 mt-10">
+          <div class="card bg-[#FFBF0F] shadow-xl">
+            <div class="flex">
+              <div class="pl-14 flex flex-col justify-center">
+                <h2 class="card-title text-4xl">15% OFF</h2>
+                <h4 class="text-xl font-semibold">on your next purchase</h4>
+                <p class="text-lg">use by March 2024</p>
+              </div>
               <div class="">
-                <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with<br><span class="text-[#1DD100]">P Paribahan</span></h1>
-                <p class="w-3/4 m-auto mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                <button class="btn bg-[#1DD100] text-xl font-bold text-black border-none">Buy Tickets</button>
+                <img src="images/cupon-devider.png" alt="" />
+              </div>
+              <div class="p-10 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold">NEW15</h2>
+                <p class="text-lg">Coupon Code</p>
               </div>
             </div>
           </div>
+
+          <div class="card bg-[#F78C9C] shadow-xl">
+            <div class="flex">
+              <div class="pl-14 flex flex-col justify-center">
+                <h2 class="card-title text-4xl">20% OFF</h2>
+                <h4 class="text-xl font-semibold">on your next purchase</h4>
+                <p class="text-lg">use by March 2024</p>
+              </div>
+              <div class="">
+                <img src="images/cupon-devider.png" alt="" />
+              </div>
+              <div class="p-10 flex flex-col justify-center">
+                <h2 class="text-3xl font-bold">Couple 20</h2>
+                <p class="text-lg">Coupon Code</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-10">
+          <button
+                class="btn text-xl font-semibold border-2 bg-white border-[#1DD10066] text-[#1DD100]"
+              >
+              See All Offers
+              </button>
+        </div>
       </section>
-    </header>
+    </main>
   </body>
 </html>
