@@ -1,6 +1,8 @@
 let countBookedSeats = 0;
 let totalPrice = 0;
 let countClick = 0;
+let grandTotal = 0;
+
 const seatBtn = document.querySelectorAll('.kbd');
 
 for(let index = 0; index< seatBtn.length; index++){
@@ -48,16 +50,38 @@ for(let index = 0; index< seatBtn.length; index++){
             const grandTotalId = document.getElementById('grandTotal');
             grandTotalId.innerText = totalPrice;
         }
-
-        // check phone number
         const phoneNumber = document.getElementById('phoneNumber');
-        phoneNumber.addEventListener('keyup', function(e){
-            const text = e.target.value;
-            console.log(typeof text);
-            if(text.length > 0){
-                const nextBtn = document.getElementById('nextBtn');
-                nextBtn.removeAttribute('disabled');
-            }
-        })
+        console.log(phoneNumber.value);
     })
 }
+
+// check phone number
+
+// if(text.length > 0 && typeof text === 'number'){
+//     const nextBtn = document.getElementById('nextBtn');
+//     nextBtn.removeAttribute('disabled');
+// }    
+// coupon field
+const couponApplyBtn = document.getElementById('couponApplyBtn');
+couponApplyBtn.addEventListener('click', function(){
+
+    const couponField = document.getElementById('couponField');
+
+    if(couponField.value === "NEW15"){
+        const discount = totalPrice * 0.15;
+        grandTotal = totalPrice - discount;
+
+        const grandTotalId = document.getElementById('grandTotal');
+        grandTotalId.innerText = grandTotal;
+    }
+    else if(couponField.value === "Couple 20"){
+        const discount = totalPrice * 0.2;
+        grandTotal = totalPrice - discount;
+
+        const grandTotalId = document.getElementById('grandTotal');
+        grandTotalId.innerText = grandTotal;             
+    }
+    else{
+        alert("Invalid Coupon. Please insert accurate coupon Code.")
+    }
+})
