@@ -91,3 +91,19 @@ couponApplyBtn.addEventListener('click', function(){
         alert("Invalid Coupon. Please insert accurate coupon Code.")
     }
 })
+
+// successful section pop up
+const nextBtn = document.getElementById('nextBtn');
+nextBtn.addEventListener('click', function(){
+    const header = document.getElementById('header');
+    header.classList.add('hidden');
+    
+    const offer = document.getElementById('offer');
+    offer.classList.add('hidden');
+
+    const paribahan = document.getElementById('paribahan');
+    paribahan.classList.add('hidden');
+
+    const success = document.getElementById('success');
+    success.classList.remove('hidden');
+})
