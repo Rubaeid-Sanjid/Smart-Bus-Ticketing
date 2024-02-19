@@ -50,17 +50,23 @@ for(let index = 0; index< seatBtn.length; index++){
             const grandTotalId = document.getElementById('grandTotal');
             grandTotalId.innerText = totalPrice;
         }
-        const phoneNumber = document.getElementById('phoneNumber');
-        console.log(phoneNumber.value);
     })
 }
 
 // check phone number
+const phoneNumberField = document.getElementById('phoneNumber');
+phoneNumberField.addEventListener('keyup', function(e){
+    const phoneNumber = e.target.value;
+    const nextBtn = document.getElementById('nextBtn');
 
-// if(text.length > 0 && typeof text === 'number'){
-//     const nextBtn = document.getElementById('nextBtn');
-//     nextBtn.removeAttribute('disabled');
-// }    
+    if (!isNaN(phoneNumber)) {
+        nextBtn.removeAttribute("disabled");
+    } 
+    else{
+        nextBtn.setAttribute("disabled", true);
+    }
+});
+   
 // coupon field
 const couponApplyBtn = document.getElementById('couponApplyBtn');
 couponApplyBtn.addEventListener('click', function(){
