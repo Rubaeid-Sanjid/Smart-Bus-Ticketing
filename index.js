@@ -3,6 +3,8 @@ let totalPrice = 0;
 let countClick = 0;
 let grandTotal = 0;
 
+// utility function
+
 const seatBtn = document.querySelectorAll('.kbd');
 
 for(let index = 0; index< seatBtn.length; index++){
@@ -16,11 +18,24 @@ for(let index = 0; index< seatBtn.length; index++){
             const btnId = document.getElementById(btn.innerText);
             btnId.classList.add('bg-[#1DD100]', 'text-white');
             
+            
             // adding selected seats
             const selectedSeats = document.getElementById('selectedSeats');
-            const h3 = document.createElement('h3');
-            h3.innerText = btn.innerText + " Economy "+ " 550";       
-            selectedSeats.appendChild(h3);
+
+            const div = document.createElement('div');
+            div.classList.add("flex","justify-between");
+
+            const t1 = document.createElement('h3');
+            const t2 = document.createElement('h3');
+            const t3 = document.createElement('h3');
+            t1.innerText = btn.innerText;
+            t2.innerText = "Economy";
+            t3.innerText = "550";
+            
+            div.appendChild(t1);
+            div.appendChild(t2);
+            div.appendChild(t3);
+            selectedSeats.appendChild(div);
             
             // decreamenting seats
             const availableSeats = document.getElementById('availableSeats');
@@ -41,6 +56,9 @@ for(let index = 0; index< seatBtn.length; index++){
             
             const grandTotalId = document.getElementById('grandTotal');
             grandTotalId.innerText = totalPrice;
+            
+            // disable the button
+            btnId.setAttribute('disabled', true); 
         }
     })
 }
@@ -98,4 +116,9 @@ nextBtn.addEventListener('click', function(){
 
     const success = document.getElementById('success');
     success.classList.remove('hidden');
+})
+
+const continueBtn = document.getElementById('continueBtn');
+continueBtn.addEventListener('click', function(){
+    window.location.reload();
 })

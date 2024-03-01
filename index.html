@@ -109,15 +109,15 @@
       <section id="offer" class="mt-28">
         <h2 class="text-4xl font-bold text-center">Best offers for you</h2>
         <!-- coupon -->
-        <div class="flex justify-center gap-6 mt-10">
+        <div class="flex flex-col lg:flex-row justify-center gap-6 mt-10">
           <div class="card bg-[#FFBF0F] shadow-xl">
-            <div class="flex">
-              <div class="pl-14 flex flex-col justify-center">
+            <div class="flex flex-col lg:flex-row">
+              <div class="lg:pl-14 flex flex-col justify-center">
                 <h2 class="card-title text-4xl">15% OFF</h2>
                 <h4 class="text-xl font-semibold">on your next purchase</h4>
                 <p class="text-lg">use by March 2024</p>
               </div>
-              <div class="">
+              <div class="hidden lg:inline">
                 <img src="images/cupon-devider.png" alt="" />
               </div>
               <div class="p-10 flex flex-col justify-center">
@@ -128,13 +128,13 @@
           </div>
 
           <div class="card bg-[#F78C9C] shadow-xl">
-            <div class="flex">
-              <div class="pl-14 flex flex-col justify-center">
+            <div class="flex flex-col lg:flex-row">
+              <div class="lg:pl-14 flex flex-col justify-center">
                 <h2 class="card-title text-4xl">20% OFF</h2>
                 <h4 class="text-xl font-semibold">on your next purchase</h4>
                 <p class="text-lg">use by March 2024</p>
               </div>
-              <div class="">
+              <div class="hidden lg:inline">
                 <img src="images/cupon-devider.png" alt="" />
               </div>
               <div class="p-10 flex flex-col justify-center">
@@ -166,13 +166,13 @@
 
         <!-- ticket -->
         <div class="container mx-auto px-3 lg:px-24 mt-10">
-          <div class="card bg-base-100 shadow-xl flex-row">
+          <div class="card bg-base-100 shadow-xl flex-col lg:flex-row">
             <!-- tickets left side -->
             <div class="card-body justify-center gap-5">
               <!-- Bus Name with total seat -->
-              <div class="flex justify-between">
+              <div class="flex flex-col lg:flex-row justify-between gap-5">
                 <!-- Bus logo container-->
-                <div class="flex gap-3">
+                <div class="flex items-center gap-3">
                   <div>
                     <img src="./images/bus-logo.png" alt="" />
                   </div>
@@ -190,7 +190,7 @@
                     class="bg-[#1DD10026] p-5 flex gap-3 rounded-xl text-[#1DD100] text-lg font-medium"
                   >
                     <img src="images/seat-green.png" alt="" />
-                    <h3><span id="availableSeats">8</span> Seats left</h3>
+                    <h3><span id="availableSeats">40</span> Seats left</h3>
                   </div>
                 </div>
               </div>
@@ -207,7 +207,7 @@
                   <h4>9:00 PM</h4>
                 </div>
 
-                <div class="flex gap-5 mt-5">
+                <div class="flex flex-col lg:flex-row gap-5 mt-5">
                   <div class="p-4 bg-[#0307120D] rounded-xl">
                     <h4>Boarding Point - Laxmipur</h4>
                   </div>
@@ -222,8 +222,8 @@
             </div>
 
             <!-- right side -->
-            <div class="flex">
-              <div>
+            <div class="flex justify-center items-center">
+              <div class="hidden lg:inline">
                 <img src="images/info-devider.png" alt="" />
               </div>
 
@@ -270,25 +270,107 @@
             </div>
 
             <div id="seat-buttons" class="grid grid-cols-2 gap-5">
+              <!-- A -->
               <div class="flex items-center gap-4">
                 <h2>A</h2>
-                <kbd id="A1" class="kbd kbd-lg border-none px-12" disable>A1</kbd>
-                <kbd id="A2" class="kbd kbd-lg border-none px-12">A2</kbd>
+                <button id="A1" class="kbd kbd-lg border-none px-12">A1</button>
+                <button id="A2" class="kbd kbd-lg border-none px-12">A2</button>
               </div>
               <div class="flex gap-5">
-                <kbd id="A3" class="kbd kbd-lg border-none px-10">A3</kbd>
-                <kbd id="A4" class="kbd kbd-lg border-none px-10">A4</kbd>
+                <button id="A3" class="kbd kbd-lg border-none px-10">A3</button>
+                <button id="A4" class="kbd kbd-lg border-none px-10">A4</button>
               </div>
-
+              <!-- B -->
               <div class="flex items-center gap-4">
                 <h2>B</h2>
-                <kbd id="B1" class="kbd kbd-lg border-none px-12">B1</kbd>
-                <kbd id="B2" class="kbd kbd-lg border-none px-12">B2</kbd>
+                <button id="B1" class="kbd kbd-lg border-none px-12">B1</button>
+                <button id="B2" class="kbd kbd-lg border-none px-12">B2</bBtton>
               </div>
               <div class="flex gap-5">
-                <kbd id="B3" class="kbd kbd-lg border-none px-10">B3</kbd>
-                <kbd id="B4" class="kbd kbd-lg border-none px-10">B4</kbd>
+                <button id="B3" class="kbd kbd-lg border-none px-10">B3</button>
+                <button id="B4" class="kbd kbd-lg border-none px-10">B4</button>
               </div>
+              <!-- C -->
+              <div class="flex items-center gap-4">
+                <h2>C</h2>
+                <button id="C1" class="kbd kbd-lg border-none px-12">C1</button>
+                <button id="C2" class="kbd kbd-lg border-none px-12">C2</button>
+              </div>
+              <div class="flex gap-5">
+                <button id="C3" class="kbd kbd-lg border-none px-10">C3</button>
+                <button id="C4" class="kbd kbd-lg border-none px-10">C4</button>
+              </div>
+              <!-- D -->
+              <div class="flex items-center gap-4">
+                <h2>D</h2>
+                <button id="D1" class="kbd kbd-lg border-none px-12">D1</button>
+                <button id="D2" class="kbd kbd-lg border-none px-12">D2</button>
+              </div>
+              <div class="flex gap-5">
+                <button id="D3" class="kbd kbd-lg border-none px-10">D3</button>
+                <button id="D4" class="kbd kbd-lg border-none px-10">D4</button>
+              </div>
+              <!-- E -->
+              <div class="flex items-center gap-4">
+                <h2>E</h2>
+                <button id="E1" class="kbd kbd-lg border-none px-12">E1</button>
+                <button id="E2" class="kbd kbd-lg border-none px-12">E2</button>
+              </div>
+              <div class="flex gap-5">
+                <button id="E3" class="kbd kbd-lg border-none px-10">E3</button>
+                <button id="E4" class="kbd kbd-lg border-none px-10">F4</button>
+              </div>
+              <!-- F -->
+              <div class="flex items-center gap-4">
+                <h2>F</h2>
+                <button id="F1" class="kbd kbd-lg border-none px-12">F1</button>
+                <button id="F2" class="kbd kbd-lg border-none px-12">F2</button>
+              </div>
+              <div class="flex gap-5">
+                <button id="F3" class="kbd kbd-lg border-none px-10">F3</button>
+                <button id="F4" class="kbd kbd-lg border-none px-10">F4</button>
+              </div>
+              <!-- G -->
+              <div class="flex items-center gap-4">
+                <h2>G</h2>
+                <button id="G1" class="kbd kbd-lg border-none px-12">G1</button>
+                <button id="G2" class="kbd kbd-lg border-none px-12">G2</button>
+              </div>
+              <div class="flex gap-5">
+                <button id="G3" class="kbd kbd-lg border-none px-10">G3</button>
+                <button id="G4" class="kbd kbd-lg border-none px-10">G4</button>
+              </div>
+              <!-- H -->
+              <div class="flex items-center gap-4">
+                <h2>H</h2>
+                <button id="H1" class="kbd kbd-lg border-none px-12">H1</button>
+                <button id="H2" class="kbd kbd-lg border-none px-12">H2</button>
+              </div>
+              <div class="flex gap-5">
+                <button id="H3" class="kbd kbd-lg border-none px-10">H3</button>
+                <button id="H4" class="kbd kbd-lg border-none px-10">H4</button>
+              </div>
+              <!-- I -->
+              <div class="flex items-center gap-4">
+                <h2>I</h2>
+                <button id="I1" class="kbd kbd-lg border-none px-12">I1</button>
+                <button id="I2" class="kbd kbd-lg border-none px-12">I2</button>
+              </div>
+              <div class="flex gap-5">
+                <button id="I3" class="kbd kbd-lg border-none px-10">I3</button>
+                <button id="I4" class="kbd kbd-lg border-none px-10">I4</button>
+              </div>
+              <!-- J -->
+              <div class="flex items-center gap-4">
+                <h2>J</h2>
+                <button id="J1" class="kbd kbd-lg border-none px-12">J1</button>
+                <button id="J2" class="kbd kbd-lg border-none px-12">J2</button>
+              </div>
+              <div class="flex gap-5">
+                <button id="J3" class="kbd kbd-lg border-none px-10">J3</button>
+                <button id="J4" class="kbd kbd-lg border-none px-10">J4</button>
+              </div>
+              
             </div>
           </div>
           <!-- select seats right side -->
@@ -364,7 +446,7 @@
                 We are working hard to find the best service and deals for you.</h3>
               <p>Shortly you will find a confirmation in your email.</p>
               <div class="card-actions">
-                <button class="btn bg-[#27AE60] text-white">Continue</button>
+                <button id="continueBtn" class="btn bg-[#27AE60] text-white">Continue</button>
               </div>
             </div>
           </div>
